@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total IMA & AMA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Colby and River Calc</h1>
+
+        <h2>Input Systems for IMA and AMA Calculation</h2>
+
+        <!-- Gears System -->
+        <h3>Gears System</h3>
+        <div class="input-section">
+            <label for="inputGearTeeth">Input Gear Teeth:</label>
+            <input type="number" id="inputGearTeeth" placeholder="e.g., 40" min="1">
+        </div>
+
+        <div class="input-section">
+            <label for="outputGearTeeth">Output Gear Teeth:</label>
+            <input type="number" id="outputGearTeeth" placeholder="e.g., 20" min="1">
+        </div>
+
+        <div class="input-section">
+            <label for="compoundGears">Number of Compound Gear Stages:</label>
+            <input type="number" id="compoundGears" placeholder="e.g., 1" min="1">
+        </div>
+
+        <!-- Pulley System -->
+        <h3>Pulley System</h3>
+        <div class="input-section">
+            <label for="inputPulleys">Number of Pulleys:</label>
+            <input type="number" id="inputPulleys" placeholder="e.g., 3" min="1">
+        </div>
+
+        <div class="input-section">
+            <label for="pulleyConfig">Pulley Configuration:</label>
+            <select id="pulleyConfig">
+                <option value="fixed">Fixed Pulley</option>
+                <option value="moveable">Moveable Pulley</option>
+                <option value="blockAndTackle">Block and Tackle (Combination)</option>
+            </select>
+        </div>
+
+        <!-- Lever System -->
+        <h3>Lever System</h3>
+        <div class="input-section">
+            <label for="leverClass">Lever Class:</label>
+            <select id="leverClass">
+                <option value="class1">Class 1 Lever</option>
+                <option value="class2">Class 2 Lever</option>
+                <option value="class3">Class 3 Lever</option>
+            </select>
+        </div>
+
+        <div class="input-section">
+            <label for="effortArm">Effort Arm Length (m):</label>
+            <input type="number" id="effortArm" placeholder="e.g., 1.5" min="0.01" step="0.01">
+        </div>
+
+        <div class="input-section">
+            <label for="loadArm">Load Arm Length (m):</label>
+            <input type="number" id="loadArm" placeholder="e.g., 0.5" min="0.01" step="0.01">
+        </div>
+
+        <!-- Input for AMA (for all systems) -->
+        <h3>Actual Mechanical Advantage (AMA)</h3>
+        <div class="input-section">
+            <label for="inputForce">Input Force (N):</label>
+            <input type="number" id="inputForce" placeholder="Enter input force" required>
+        </div>
+
+        <div class="input-section">
+            <label for="outputForce">Output Force (N):</label>
+            <input type="number" id="outputForce" placeholder="Enter output force" required>
+        </div>
+
+        <div class="button-section">
+            <button onclick="calculateTotalMA()">Calculate Total IMA & AMA</button>
+        </div>
+
+        <div id="result" class="result-section"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
